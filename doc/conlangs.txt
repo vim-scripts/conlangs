@@ -1,0 +1,41 @@
+*conlangs.txt*  Esperanto text typing
+
+For Vim version 7.0.  Last change: 2006 Oct 01
+
+$Id: conlangs.txt 1.2 2006/10/01 03:08:23 slobin Exp $
+
+==============================================================================
+*conlangs* *Esperanto* *Volapuk*
+
+  Vim already has support for typing text in Esperanto. An appropriate keymap
+  is supplied among others. You can type "Cx" for "C with circumflex", "ux"
+  for "u with breve" and so on. But keymap approach has some disadvantages, at
+  least according to my own taste. First, I don't like mappings with more than
+  one character in left side. Timeout behaviour irritates me. I think it is
+  illogical to depend on how fast can I type. Second, I have another (Russian)
+  keymap loaded already, and there is no room for a third one.
+
+  So, I suggest another solution. With this plugin the character 'x' is mapped
+  to a function, which looks at the previous character in a line and replaces
+  it to the corresponding accented one. Nothing is depending on timeouts. You
+  can even return to a letter typed earlier, position cursor after it, and
+  type 'x' - unadorned letter will be converted into accented one. In a case
+  you really want to type a combination of plain letter and 'x', just type 'x'
+  twice: accented letters are replaced to the combinations of unaccented ones
+  with 'x'. Of course uppercase 'X' also works.
+
+  Plugin functionality is disabled by default. To enable it, just type the
+  command ":Esperanto on" in |ex| mode. Of course, ":Esperanto off" disables
+  it back, and ":Esperanto" without argument displays the current status.
+
+  Especially for conlanging fans, Volapuk language is supported gratis. Enable
+  it with ":Volapuk on", and then type vowels "a", "o" and "u" (as far as its
+  uppercase counterparts "A", "O", "U") with umlauts using the ":" key.
+
+  This plugin is placed in public domain. It has been written by Cyril Slobin.
+  Unfortunately, he currently have no reliable email address. However you can
+  try to drop a note to <slobin@ice.ru>, and if constellations appear in right
+  configuration, he maybe (only maybe!) will read it.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl
